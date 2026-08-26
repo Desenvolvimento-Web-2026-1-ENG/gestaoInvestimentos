@@ -1,0 +1,16 @@
+Funcionalidades de Controle de Gastos
+Registro de Renda Variável e Fixa: Além do salário fixo, um espaço ágil para lançar entradas avulsas (como recebimentos por diárias, plantões ou trabalhos autônomos).
+
+Monitor de Limite do Cartão de Crédito: Controle em tempo real do limite disponível e uma projeção mostrando como as compras parceladas vão comprometer a renda dos próximos meses.
+
+Categorias Altamente Específicas: Flexibilidade para criar pastas de gastos focadas na realidade do usuário (por exemplo, separar "Combustível" de "Manutenção da Moto", ou criar categorias para "Equipamentos Esportivos" e "Inscrições em Provas/Concursos").
+
+Radar de Desperdício (Filtro Lean): Uma aba que rastreia assinaturas esquecidas, serviços não utilizados e pequenas despesas diárias recorrentes, ajudando a eliminar gastos que não agregam valor.
+
+Orçamento Diário de "Sobrevivência": O sistema pega a renda total, subtrai as contas fixas e divide o que sobrou pelos dias do mês, mostrando exatamente qual é o limite de gasto por dia para não fechar no vermelho.
+
+Calculadora de Custo-Benefício: Um pequeno simulador onde o usuário cadastra um item de alto valor que deseja comprar e o sistema ajuda a avaliar se o investimento compensa financeiramente antes de concretizar o gasto.
+
+Calendário de Vencimentos e Alertas: Uma visão mensal das contas a pagar, com alertas para evitar qualquer cobrança de juros por atraso.
+
+Fechamento de Ciclo (Fatura): Um botão para consolidar o mês, mostrando de forma visual (com gráficos) a diferença exata entre o que foi planejado e o que foi efetivamente gasto.
