@@ -1,16 +1,30 @@
-import { GastoController } from "@interfaces/controllers/GastoController";
-import { RegistrarGastoService } from "@services/RegistrarGastoService";
-import { GastoRepositoryInMemory } from "@infrastructure/database/GastoRepositoryInMemory";
+import { GastoController } from "@interfaces/controllers/GastoController.js";
+import { RegistrarGastoService } from "@services/RegistrarGastoService.js";
+import { ConsultarGastosService } from "@services/ConsultarGastosService.js";
+import { AtualizarGastoService } from "@services/AtualizarGastoService.js";
+import { ExcluirGastoService } from "@services/ExcluirGastoService.js";
+import { DashboardService } from "@services/DashboardService.js";
+import { GastoRepositoryInMemory } from "@infrastructure/database/GastoRepositoryInMemory.js";
 
 export class GastoFactory {
+  private static repository = new GastoRepositoryInMemory();
+
   static criarController(): GastoController {
-    // 1. Instanciamos o repositório
-    const gastoRepo = new GastoRepositoryInMemory();
+    const repo = GastoFactory.repository;
 
-    // 2. Injetamos no Service
-    const service = new RegistrarGastoService(gastoRepo);
+    const registrarService = new RegistrarGastoService(repo);
+    const consultarService = new ConsultarGastosService(repo);
+    const atualizarService = new AtualizarGastoService(repo);
+    const excluirService = new ExcluirGastoService(repo);
+    const dashboardService = new DashboardService(repo);
 
-    // 3. Devolvemos o Controller pronto
-    return new GastoController(service);
+    return new GastoController(
+      registrarService,
+      consultarService,
+      atualizarService,
+      excluirService,
+      dashboardService
+    );
   }
 }
+

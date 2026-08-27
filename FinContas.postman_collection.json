@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "7fa1839a-7c9b-449e-b7d1-fincontas-p1",
+		"name": "FinContas API (P1)",
+		"description": "Coleção completa de requisições da API RESTful do FinContas para a Avaliação Parcial (P1).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Gastos (CRUD)",
+			"item": [
+				{
+					"name": "Criar Gasto (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"descricao\": \"Supermercado Mensal\",\n  \"valor\": 350.50,\n  \"data\": \"2026-08-26\",\n  \"categoria\": \"Alimentação\",\n  \"formaPagamento\": \"Cartão de Crédito\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/gastos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gastos"
+							]
+						},
+						"description": "Registra um novo gasto no sistema."
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos os Gastos (GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/gastos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gastos"
+							]
+						},
+						"description": "Retorna todos os gastos cadastrados."
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar Gastos por Categoria e Mês (GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/gastos?mes=08&ano=2026&categoria=Alimentação",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gastos"
+							],
+							"query": [
+								{
+									"key": "mes",
+									"value": "08"
+								},
+								{
+									"key": "ano",
+									"value": "2026"
+								},
+								{
+									"key": "categoria",
+									"value": "Alimentação"
+								}
+							]
+						},
+						"description": "Filtra gastos por parâmetros de query (mês, ano e categoria)."
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Gasto por ID (GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/gastos/d1a8c456-7890-4abc-def1-1234567890ab",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gastos",
+								"d1a8c456-7890-4abc-def1-1234567890ab"
+							]
+						},
+						"description": "Retorna os detalhes de um gasto específico."
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Gasto por ID (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"descricao\": \"Supermercado Mensal Atualizado\",\n  \"valor\": 420.00,\n  \"data\": \"2026-08-26\",\n  \"categoria\": \"Alimentação\",\n  \"formaPagamento\": \"PIX\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/gastos/d1a8c456-7890-4abc-def1-1234567890ab",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gastos",
+								"d1a8c456-7890-4abc-def1-1234567890ab"
+							]
+						},
+						"description": "Atualiza os dados de um gasto existente."
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Gasto por ID (DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/gastos/d1a8c456-7890-4abc-def1-1234567890ab",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gastos",
+								"d1a8c456-7890-4abc-def1-1234567890ab"
+							]
+						},
+						"description": "Remove um gasto pelo ID."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Categorias",
+			"item": [
+				{
+					"name": "Listar Categorias (GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/categorias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias"
+							]
+						},
+						"description": "Lista todas as categorias pré-definidas no sistema."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. Dashboard",
+			"item": [
+				{
+					"name": "Obter Resumo do Dashboard (GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dashboard/resumo?mes=08&ano=2026",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dashboard",
+								"resumo"
+							],
+							"query": [
+								{
+									"key": "mes",
+									"value": "08"
+								},
+								{
+									"key": "ano",
+									"value": "2026"
+								}
+							]
+						},
+						"description": "Retorna totais consolidados, divisão por categorias e maiores gastos do mês."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/api/v1",
+			"type": "string"
+		}
+	]
+}
