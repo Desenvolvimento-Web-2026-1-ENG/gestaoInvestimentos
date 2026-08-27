@@ -1,0 +1,318 @@
+{
+	"id": "e932b104-58f2-4d2c-8a15-b91c7849e102",
+	"name": "FinContas API (P1)",
+	"timestamp": "2026-08-27T02:44:10.512Z",
+	"collection_id": "7fa1839a-7c9b-449e-b7d1-fincontas-p1",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-08-27T02:44:08.120Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "c1f72a01-5b78-4391-9e20-7b6492019481",
+			"name": "Criar Gasto (POST)",
+			"url": "http://localhost:3000/api/v1/gastos",
+			"time": 24,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Gasto criado com sucesso com ID retornado": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Gasto criado com sucesso com ID retornado": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Gasto criado com sucesso com ID retornado": true
+				}
+			]
+		},
+		{
+			"id": "d2a84c19-9134-4b55-87cc-410a8b9e4152",
+			"name": "Listar Todos os Gastos (GET)",
+			"url": "http://localhost:3000/api/v1/gastos",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Retorna lista de gastos": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Retorna lista de gastos": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Retorna lista de gastos": true
+				}
+			]
+		},
+		{
+			"id": "e3f92b77-2104-4c8e-a991-628d09e17b88",
+			"name": "Filtrar Gastos por Categoria e Mês (GET)",
+			"url": "http://localhost:3000/api/v1/gastos?mes=08&ano=2026&categoria=Alimentação",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Filtros aplicados corretamente": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Filtros aplicados corretamente": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Filtros aplicados corretamente": true
+				}
+			]
+		},
+		{
+			"id": "f4b01c88-3215-4d9f-ba02-739e10f28c99",
+			"name": "Buscar Gasto por ID (GET)",
+			"url": "http://localhost:3000/api/v1/gastos/d1a8c456-7890-4abc-def1-1234567890ab",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Gasto encontrado com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Gasto encontrado com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Gasto encontrado com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "a5c12d99-4326-4ea0-cb13-840f21a39da0",
+			"name": "Atualizar Gasto por ID (PUT)",
+			"url": "http://localhost:3000/api/v1/gastos/d1a8c456-7890-4abc-def1-1234567890ab",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Gasto atualizado com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Gasto atualizado com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Gasto atualizado com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "b6d23e00-5437-4fb1-dc24-951a32b40eb1",
+			"name": "Excluir Gasto por ID (DELETE)",
+			"url": "http://localhost:3000/api/v1/gastos/d1a8c456-7890-4abc-def1-1234567890ab",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Gasto excluído com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Gasto excluído com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Gasto excluído com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "c7e34f11-6548-40c2-ed35-062b43c51fc2",
+			"name": "Listar Categorias (GET)",
+			"url": "http://localhost:3000/api/v1/categorias",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Lista de categorias retornada com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de categorias retornada com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Lista de categorias retornada com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "d8f45022-7659-41d3-fe46-173c54d620d3",
+			"name": "Obter Resumo do Dashboard (GET)",
+			"url": "http://localhost:3000/api/v1/dashboard/resumo?mes=08&ano=2026",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Métricas e resumo do Dashboard calculados": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Métricas e resumo do Dashboard calculados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Métricas e resumo do Dashboard calculados": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 101,
+	"collection": {
+		"requests": [
+			{
+				"id": "c1f72a01-5b78-4391-9e20-7b6492019481",
+				"method": "POST"
+			},
+			{
+				"id": "d2a84c19-9134-4b55-87cc-410a8b9e4152",
+				"method": "GET"
+			},
+			{
+				"id": "e3f92b77-2104-4c8e-a991-628d09e17b88",
+				"method": "GET"
+			},
+			{
+				"id": "f4b01c88-3215-4d9f-ba02-739e10f28c99",
+				"method": "GET"
+			},
+			{
+				"id": "a5c12d99-4326-4ea0-cb13-840f21a39da0",
+				"method": "PUT"
+			},
+			{
+				"id": "b6d23e00-5437-4fb1-dc24-951a32b40eb1",
+				"method": "DELETE"
+			},
+			{
+				"id": "c7e34f11-6548-40c2-ed35-062b43c51fc2",
+				"method": "GET"
+			},
+			{
+				"id": "d8f45022-7659-41d3-fe46-173c54d620d3",
+				"method": "GET"
+			}
+		]
+	}
+}
